@@ -1,0 +1,27 @@
+name: openLooKeng gitee repos mirror periodic job
+
+on:
+  pull_request:
+    # Runs at every pull requests submitted in master branch 
+    branches: [ master ]
+    paths:
+    - '.github/workflows/**'
+  schedule:
+    # Runs at 01:00 UTC (9:00 AM Beijing) every day
+    - cron:  '0 1 * * *'
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Mirror the gitee/openlookeng org repos to github/openlookeng.
+      uses: Yikun/hub-mirror-action@v0.08
+      with:
+        src: gitee/openlookeng
+        dst: github/openlookeng
+        dst_key: ${{ secrets.SYNC_LOOKENG_PRIVATE_KEY }}
+        dst_token:  ${{ secrets.SYNC_LOOKENG_TOKEN }}
+        account_type: org
+        static_list: "website,community"
