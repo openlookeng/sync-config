@@ -24,4 +24,4 @@ jobs:
         dst_key: ${{ secrets.SYNC_LOOKENG_PRIVATE_KEY }}
         dst_token:  ${{ secrets.SYNC_LOOKENG_TOKEN }}
         account_type: org
-        static_list: "website,community"
+        static_list: "website,community,hetu-core,hetu-odbc-driver,hetu-odbc-gateway,hetu-maven-plugin,openLooKeng-installation"
