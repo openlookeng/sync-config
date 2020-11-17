@@ -17,7 +17,7 @@ jobs:
 
     steps:
     - name: Mirror the gitee/openlookeng org repos to github/openlookeng.
-      uses: Yikun/hub-mirror-action@v0.08
+      uses: Yikun/hub-mirror-action@v0.11
       with:
         src: gitee/openlookeng
         dst: github/openlookeng
