@@ -17,7 +17,7 @@ jobs:
 
     steps:
     - name: Mirror the gitee/openlookeng org repos to github/openlookeng.
-      uses: Yikun/hub-mirror-action@v0.08
+      uses: Yikun/hub-mirror-action@v0.11
       with:
         src: gitee/openlookeng
         dst: github/openlookeng
@@ -25,3 +25,4 @@ jobs:
         dst_token:  ${{ secrets.SYNC_LOOKENG_TOKEN }}
         account_type: org
         static_list: "website,community,hetu-core,hetu-odbc-driver,hetu-odbc-gateway,hetu-maven-plugin,openLooKeng-installation"
+        force_update: true
