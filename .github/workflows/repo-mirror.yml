@@ -1,4 +1,4 @@
-name: openLooKeng gitee repos mirror periodic job
+name: openLooKeng gitee repos mirror periodic job manual
 
 on:
   pull_request:
